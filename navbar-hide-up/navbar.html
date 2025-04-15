@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>navbar-hide-up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav id="site-header" class="default-header">
+    <div style="min-height: 80px;background-color: antiquewhite;">
+      <a href="#about">about</a>
+    </div>
+  </nav>
+
+
+  <script>
+    (function () {
+      const doc = document.documentElement;
+      const header = document.getElementById('header');
+      let prevScroll = window.scrollY || doc.scrollTop;
+      let prevDirection = 0;
+      const threshold = 200;
+
+      window.addEventListener('scroll', () => {
+        const curScroll = window.scrollY || doc.scrollTop;
+        const curDirection = curScroll > prevScroll ? 2 : 1;
+
+        if (curDirection !== prevDirection) {
+          if (curDirection === 2 && curScroll > threshold) {
+            header.classList.add('hide');
+            prevDirection = curDirection;
+          } else if (curDirection === 1) {
+            header.classList.remove('hide');
+            prevDirection = curDirection;
+          }
+        }
+
+        header.classList.toggle('scrolled', curScroll > threshold);
+        prevScroll = curScroll;
+      });
+    })();
+  </script>
+</body>
+
+</html>
