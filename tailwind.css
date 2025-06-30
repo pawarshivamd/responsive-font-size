@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .table-radius {
+    border-radius: var(--table-radius);
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  .table-radius th:first-child {
+    border-top-left-radius: var(--table-radius);
+  }
+  .table-radius th:last-child {
+    border-top-right-radius: var(--table-radius);
+  }
+  .table-radius tr:last-child td:first-child {
+    border-bottom-left-radius: var(--table-radius);
+  }
+  .table-radius tr:last-child td:last-child {
+    border-bottom-right-radius: var(--table-radius);
+  }
+}

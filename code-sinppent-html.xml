@@ -1,0 +1,17 @@
+{
+    "Custom img tag": {
+        "prefix": "img",
+        "body": [
+            "<img class=\"img-fluid\" src=\"$2\" width=\"$3\" height=\"$4\" alt=\"$5\" loading=\"lazy\" />"
+        ],
+        "description": "Insert an image tag with custom attributes"
+    },
+	"Custom img tag srcset": {
+		"prefix": "img",
+		"body": [
+			"<img class=\"img-fluid\" src=\"$1\" srcset=\"$1 1x, $1 2x, $1 3x\" width=\"$2\" height=\"$3\" alt=\"$4\" loading=\"lazy\" />"
+		],
+		"description": "Insert an image tag with custom attributes and srcset"
+	}
+}
+
