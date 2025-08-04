@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    margin: 30px;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: #000;
+    clip-path: path('M 10,50 L 90,50 A 10,10 0,0,0 100,40 L 100,10 A 10,10 0,0,1 110,0 L 190,0 A 10,10 0,0,1 200,10 L 200,190 A 10,10 0,0,1 190,200 L 10,200 A 10,10 0,0,1 0,190 L 0,60 A 10,10 0,0,1 10,50 z');
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.link_hover {
+    position: relative;
+    border-radius: .5rem !important;
+  }
+  
+  .link_hover .butn-vid {
+    background: #fff;
+    border-radius: 14px 0px 8px 0px;
+    padding: .4375rem .875rem;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    visibility: hidden;
+    opacity: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .link_hover .butn-vid .play-button img {
+    width: 1.625rem;
+    height: 1.625rem;
+  }
+  
+  .link_hover .butn-vid .shap-left-bottom {
+    position: absolute;
+    left: -1rem;
+    bottom: -9px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  
+  .link_hover .butn-vid .shap-left-bottom svg {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .link_hover:hover .butn-vid {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.4s ease-in-out;
+  }
+  .img{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
